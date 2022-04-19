@@ -1,0 +1,36 @@
+/*
+ ============================================================================
+ Name        : Exercicios_Computacao_Cientifica.c
+ Author      : Laura Martin Werneck
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(void) {
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+
+	float f_racio, f;
+	float x;
+	float raiz;
+
+	x = 0,001;
+
+	raiz = sqrt(x*x + 1);
+
+	f = 1 - raiz;
+
+	f_racio = (-x*x)/(-1- raiz);
+
+	printf("O cálculo com a função original da: %f\n", f);
+
+	printf("O cálculo com a função racionalizada da: %f\n", f_racio);
+
+
+	return EXIT_SUCCESS;
+}
