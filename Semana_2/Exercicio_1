@@ -13,7 +13,6 @@
 #include <math.h>
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
 
 	float f_racio, f;
 	float x;
