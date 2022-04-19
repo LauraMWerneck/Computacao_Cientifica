@@ -1,0 +1,29 @@
+/*
+ * Exercicio_regra_de_Horner.c
+ *
+ *  Created on: 19 de abr. de 2022
+ *      Author: laura
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(void) {
+
+	float f, x;
+
+	x = 4,71;
+
+	f = 1,5 + x*(3,2 + x*(-6,1 + x*x));
+
+	printf("f(x) = %f\n", f);
+
+	return EXIT_SUCCESS;
+}
+
+
+
+
+f(x) = 1.000000
+
