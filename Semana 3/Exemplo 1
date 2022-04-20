@@ -1,3 +1,14 @@
+# Problema:
+
+Use uma aproximação por diferença centrada de O(h2) para estimar a derivada primeira da função a seguir em x = 0,5.
+
+f(x) = – 0,1x4 – 0,15x3 – 0,5x2 – 0,25x +1,2
+
+▪ Utilizando o Scilab, faça o cálculo iniciando com h = 2 e divida progressivamente o tamanho do passo por um
+fator 8 para demonstrar que o erro de arredondamento torna-se dominante à medida que o tamanho do passo é reduzido.
+
+▪ Com o auxílio de um gráfico erro total x h, relacione os resultados obtidos com a equação de hotm.
+
 # Código:
 
 clear; //Limpa a memória
