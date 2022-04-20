@@ -1,4 +1,4 @@
-Código:
+## Código:
 
 clear; //Limpa a memória
 j=1;
@@ -33,7 +33,7 @@ hotm = (3*%eps/M)^(1/3.); //avalia o passo otimo
 disp('hotm',hotm);
 
 
-Soluçã:
+## Soluçã:
 
 Entre com o valor de xi: 0.5
 
