@@ -1,3 +1,12 @@
+## Exemplo
+
+Utilizar o método de Newton-Raphson para encontrar a raiz de:
+
+𝑓(𝑥) = 𝑒^(−𝑥) − 𝑥
+
+utilizando como critério de parada 𝜀𝑠 = 1 %.
+
+
 ## Código
 
 ```C
