@@ -1,3 +1,5 @@
+## Código
+
 ```C
 function [raiz, iter]=new_raphson(funcao, derivada, es, maxi)
     // Cálculo das raizes por Newton-Raphson
@@ -61,3 +63,29 @@ function [raiz, iter]=new_raphson(funcao, derivada, es, maxi)
     iter = i;
 endfunction
 ```
+
+## Aplicação
+
+--> fun='exp(-x)-x'
+
+
+--> der='-exp(-x)-1'
+
+
+--> [raiz, iter]=new_raphson(fun, der)
+Entre com o limite inferior de x a = 0
+
+Entre com o limite superior de x b = 1
+
+Entre com o valor inicial x0 = 0.2
+
+Iter	Raiz 	erro aproximado % 
+1	0.5401992032	62.976621
+2	0.5670108503	4.728595
+3	0.5671432872	0.023352
+4	0.5671432904	0.000001
+
+f(0.567143) = 0.000000
+ iter  = 4
+
+ raiz  = 0.5671433
