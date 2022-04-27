@@ -1,4 +1,6 @@
-* Código
+## Código
+
+```C
 
 function [raiz, i]=bissecao(funcao, xl, xu, es)
     // Cálculo das raizes pelo processo da bisseção
@@ -49,41 +51,28 @@ function [raiz, i]=bissecao(funcao, xl, xu, es)
     raiz = xr_novo
 endfunction
 
+```
 
-* Aplicação:
+
+## Aplicação
 
 Usando a função do exemplo 2
 
 --> exec('C:\Users\Aluno\efgrre.sce', -1)
 
 --> CD = 0.25    
- CD  = 
-
-   0.25
 
 
 --> G = 9.81
- G  = 
-
-   9.81
 
 
 --> v =36
- v  = 
-
-   36.
 
 
 --> t = 4
- t  = 
-
-   4.
 
 
 --> fum = 'sqrt(G*x/CD).*tanh(sqrt(G*CD/x)*t) - v'
- fum  = 
-
- sqrt(G*x/CD).*tanh(sqrt(G*CD/x)*t) - v
 
 
 --> [raiz, i]=bissecao(fun, 100, 200)
@@ -108,11 +97,8 @@ Iter	Erro aprox.%	Raiz		xl		xu
 18	0.000267	142.737961	142.737579	142.738342
 19	0.000134	142.737770	142.737579	142.737961
 20	0.000067	142.737675	142.737579	142.737770
- i  = 
 
-   20.
+ i  = 20
 
- raiz  = 
-
-   142.73767
+ raiz  = 142.73767
 
