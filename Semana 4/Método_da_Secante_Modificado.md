@@ -90,9 +90,13 @@ Entre com o limite superior de x b = 0
 Entre com o valor inicial x0 = -2
 
 Iter	Raiz		erro aprox. % 
+
 1	-1.8607392564	7.484162
+
 2	-1.8639939047	0.174606
+
 3	-1.8639951924	0.000069
+
 
 f(-1.863995) = 0.000001
 
