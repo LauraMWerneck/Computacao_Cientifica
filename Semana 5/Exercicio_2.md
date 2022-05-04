@@ -1,3 +1,15 @@
+## Exercício
+Use a eliminação de Gauss com pivotamento para resolver manualmente o sistema:
+
+3 𝑥1 + 𝑥2 + 2 𝑥3 = 2
+
+6 𝑥1 + 3 𝑥2 − 𝑥3 = −2
+
+2 𝑥1 + 3 𝑥2 + 𝑥3 = 1
+
+• Com o auxílio da Função Scilab, confira o resultado obtido.
+
+
 ## Resposta no Scilab 
 --> A=[3 1 2; 6 3 -1; 2 3 1]
  A  = 
