@@ -26,6 +26,9 @@ function x=fatoralu(A, b)
             A(j,i+1:n)= A(j,i+1:n)-A(j,i)*A(i,i+1:n);    // For de maneira implicita
         end
     end
+    //Mostra A
+    disp('L/U', A)
+    disp('P', P)
     // substituição progressiva
     b = P*b;          // Mantem b permutado
     d = zeros(n,1);   // Cria o vetor coluna d zerado
