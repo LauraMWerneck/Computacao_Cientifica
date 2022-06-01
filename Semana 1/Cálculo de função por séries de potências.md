@@ -1,7 +1,7 @@
 ## Código
 
 ```c
-function [fx, term] = series(fun, x, n_sig)
+function [fx, term] = series(fun, freal, x, n_sig)
     //
     // Cálculo de funções com serie de potências
     // function [fx,term]=series(funcao, x, n_sig)
@@ -17,7 +17,7 @@ function [fx, term] = series(fun, x, n_sig)
     // exec('path\series.sci',-1)
     // fun ='(-1)^(n)*x^(2*n)/factorial(2*n)'
     // [fx,term]=series(fun, %pi/3, 3)
-    if argn(2) < 3 then
+    if argn(2) < 4 then
         n_sig = 3;
     end
     //
@@ -26,7 +26,7 @@ function [fx, term] = series(fun, x, n_sig)
     // está sendo usada para lidar com parâmetros opcionais.
     //
     es = 0.5*10^(2-n_sig); // condição de parada relativa %
-    fx_old = 0; fx = 0;n = 0; vreal=cos(x);
+    fx_old = 0; fx = 0;n = 0; vreal = evstr(freal)
     printf("Termo fx et %% erro %%\n");
     while 1 do 
         fx = fx + evstr(fun);
@@ -42,47 +42,56 @@ function [fx, term] = series(fun, x, n_sig)
     term = n+1;
 endfunction
 
+
 ```
 
 ## Console
---> f = 'cos(x)'
- f  =  "cos(x)"
+--> freal = 'cos(x)'
+ freal  = 
 
---> series(f, 0, 4)
+ cos(x)
+
+
+--> fun ='(-1)^(n)*x^(2*n)/factorial(2*n)'
+ fun  = 
+
+ (-1)^(n)*x^(2*n)/factorial(2*n)
+
+
+--> [fx, term] = series(fun, freal, 0)
 
 Termo fx et % erro %
 
-1           1.000000   0.000000 100.000000
+1          1.000000   0.000000 100.000000
 
-2           2.000000 100.000000  50.000000
+2          1.000000   0.000000   0.000000
 
-3           3.000000 200.000000  33.333333
+term  = 
 
-4           4.000000 300.000000  25.000000
+   2.
 
-5           5.000000 400.000000  20.000000
+ fx  = 
 
-6           6.000000 500.000000  16.666667
+   1.
 
-7           7.000000 600.000000  14.285714
 
-8           8.000000 700.000000  12.500000
 
-9           9.000000 800.000000  11.111111
+--> [fx, term] = series(fun, freal, 0.5)
 
-10         10.000000 900.000000  10.000000
+Termo fx et % erro %
 
-11         11.000000 1000.000000   9.090909
+1          1.000000  13.949393 100.000000
 
-12         12.000000 1100.000000   8.333333
+2          0.875000   0.294281  14.285714
 
-13         13.000000 1200.000000   7.692308
+3          0.877604   0.002462   0.296736
 
-14         14.000000 1300.000000   7.142857
+4          0.877582   0.000011   0.002473
 
-15         15.000000 1400.000000   6.666667
+term  = 
 
-16         16.000000 1500.000000   6.250000
+   4.
 
-17         17.000000 1600.000000   5.882353
+ fx  = 
 
+   0.8775825
