@@ -17,11 +17,11 @@ h = input('Entre com o passo de cálculo: ');
 disp('Entre com os coef da f. polinomial entre ');
 vetor=input(' no formato [a0 a1 . . . an]:');
 f = poly(vetor,'x','c');
-disp('f(x)’, f)
+disp('f(x)',f)
 flinha = derivat(f);
-disp('f´(x)’, flinha);
+disp('f´(x)', flinha);
 vreal = horner(flinha,xi);
-printf(“Val. real da der. em x = %f é %f\n",xi,vreal);
+printf("Val. real da der. em x = %f é %f\n",xi,vreal);
 a = horner(f,xi-h)
 b = horner(f,xi)
 c = horner(f,xi+h)
@@ -30,15 +30,53 @@ dfdt = (c - b)/h;
 for i=1:3
     printf("Diferença %s :\n",diferenca);
     et = 100*abs((vreal - dfdt)/vreal) ; 
-    printf(“Val. aprox. em x = %f é %f \n",xi,dfdt);
+    printf("Val. aprox. em x = %f é %f \n",xi,dfdt);
     printf("Com erro relativo de %f %%\n\n",et);
     if i==1 then
-        diferenca =
-        'regressiva';
+        diferenca ='regressiva';
         dfdt = (b - a)/h;
     elseif i==2 then
         diferenca = 'centrada';
         dfdt = (c - a)/(2*h);
     end
 end
+
 ```
+
+## Console
+Entre com o valor de xi: 2
+
+Entre com o passo de cálculo: 0.5
+
+
+  "Entre com os coef da f. polinomial entre "
+ no formato [a0 a1 . . . an]:[-88 7 -6 25]
+
+
+  "f(x)"
+
+  -88 +7x -6x² +25x³
+
+  "f´(x)"
+
+  7 -12x +75x²
+Val. real da der. em x = 2.000000 é 283.000000
+
+Diferença progressiva :
+
+Val. aprox. em x = 2.000000 é 361.250000 
+
+Com erro relativo de 27.650177 %
+
+Diferença regressiva :
+
+Val. aprox. em x = 2.000000 é 217.250000 
+
+Com erro relativo de 23.233216 %
+
+
+Diferença centrada :
+
+Val. aprox. em x = 2.000000 é 289.250000 
+
+Com erro relativo de 2.208481 %
