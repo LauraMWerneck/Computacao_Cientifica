@@ -1,5 +1,8 @@
 ## Console
 
+
+OBS: Fazer pelo método de Gauss Seidel e achar o lambida que minimize o número de iterações.
+
 Utilizando fatoração LU:
 
 ```c
