@@ -1,0 +1,6 @@
+O Scilab possui funções implícitas para calcular as normas e o número de
+condição de uma matriz:
+▪ norm(A [,flag]);
+▪ cond(A [,flag]);
+onde, A é um vetor ou matriz e flag é uma string representando o tipo de
+norma: 1, 2, 'inf' ou 'fro’
