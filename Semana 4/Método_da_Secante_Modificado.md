@@ -1,14 +1,11 @@
-## Exemplo
-
-Use o método da secante modificado para estimar a raiz de
-
-𝑓(𝑥) = cos(𝑥) − 𝑥∙𝑒^(𝑥)
-
-no intervalo −2 ≤ 𝑥 ≤ 0, utilizando com critério de parada 𝜀𝑠 = 1 %.
-
 ## Código
 
 ```C
+/*Use o método da secante modificado para estimar a raiz de
+
+𝑓(𝑥) = cos(𝑥) − 𝑥∙𝑒^(𝑥)
+
+no intervalo −2 ≤ 𝑥 ≤ 0, utilizando com critério de parada 𝜀𝑠 = 1 %.*/
 
 function [raiz, iter]=sec_mod(funcao, dxi, es, maxi)
     // Cálculo das raizes pelo método da secante modificado
@@ -75,14 +72,15 @@ function [raiz, iter]=sec_mod(funcao, dxi, es, maxi)
     iter = i;
 endfunction
 
-```
 
-## Aplicação
+/*     Console
+--> fun='cos(x)-x.*exp(x)'     // Obs: tem que fazer '.*' por ser dois vetores multiplicados
+ fun  = 
 
---> fun='cos(x)-x.*exp(x)'
- OBS: Para ser ponto a ponto precisa ser .* para a multiplicação, porque x e exp(x) são dois vetores
+ cos(x)-x.*exp(x)
 
---> [raiz, iter]=sec_mod(fun)
+
+--> [raiz, iter]=sec_mod(fun) 
 Entre com o limite inferior de x a = -2
 
 Entre com o limite superior de x b = 0
@@ -90,16 +88,17 @@ Entre com o limite superior de x b = 0
 Entre com o valor inicial x0 = -2
 
 Iter	Raiz		erro aprox. % 
-
 1	-1.8607392564	7.484162
-
 2	-1.8639939047	0.174606
-
 3	-1.8639951924	0.000069
 
-
 f(-1.863995) = 0.000001
+ iter  = 
 
- iter  = 3
+   3.
 
- raiz  = -1.8639952
+ raiz  = 
+
+  -1.8639952*/
+
+```
