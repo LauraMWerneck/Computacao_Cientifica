@@ -24,4 +24,15 @@ Entre com as aprox. inicial x0 = [1;2]
    0.6473061
    3.0197778
 
+--> [x, iter]=newraph_n(fun, jac)
+Entre com as aprox. inicial x0 = [0;1]
+
+ iter  = 
+
+   5.
+
+ x  = 
+
+   0.1674742
+   4.4718606
 ```
